@@ -1,0 +1,30 @@
+header{
+    display: flex;
+    padding-inline: 16px;
+    padding-block: 8px;
+    background-color: #333;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 3 0px;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        
+        li {
+            list-style: none;
+        }
+        & *:hover{
+            cursor: pointer;
+            scale: 105%;
+            transition: 150ms;
+            color: rgb(150, 170, 226);
+        }
+    }
+
+
+}
+

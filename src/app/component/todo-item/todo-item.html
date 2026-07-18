@@ -1,0 +1,5 @@
+<li appHighlightCompletedTodo [isCompleted]="todo().completed" class="todoItem">
+    <!-- <checkbod>{{todo().completed ? 'Completed' : 'Pending'}}</checkbod> -->
+    <input id="todo-{{todo().id}}" type="checkbox" [checked]="todo().completed" (change)="this.todoClicked()">
+    <label>{{todo().title}}</label>
+</li>
