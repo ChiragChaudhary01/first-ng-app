@@ -1,8 +1,13 @@
 <h3>Todo List</h3>
 
 @if (todoItems().length) {
+<form class="filterBar">
+    <label>Filter Todos</label>
+    <input name="searchTerm " [(ngModel)]="searchTerm" type="text" placeholder="Search Todos ...">
+</form>
+
 <div class="todos">
-    @for (todo of todoItems(); track todo.id) {
+    @for (todo of todoItems() | filterTodos : searchTerm(); track todo.id) {
     <app-todo-item [todo]="todo" (todoToggled)="updateTodoItem($event)" />
     }
 </div>
